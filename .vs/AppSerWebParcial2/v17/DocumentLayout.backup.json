@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Aleja\\source\\repos\\AppSerWebParcial2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8BBE700F-27BF-4D8C-BB79-ED3729E58563}|AppSerWebParcial2.csproj|c:\\users\\aleja\\source\\repos\\appserwebparcial2\\clases\\clsmulta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8BBE700F-27BF-4D8C-BB79-ED3729E58563}|AppSerWebParcial2.csproj|C:\\Users\\Aleja\\source\\repos\\AppSerWebParcial2\\clases\\clsupload.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8BBE700F-27BF-4D8C-BB79-ED3729E58563}|AppSerWebParcial2.csproj|solutionrelative:clases\\clsupload.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BBE700F-27BF-4D8C-BB79-ED3729E58563}|AppSerWebParcial2.csproj|c:\\users\\aleja\\source\\repos\\appserwebparcial2\\controllers\\uploadfilescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8BBE700F-27BF-4D8C-BB79-ED3729E58563}|AppSerWebParcial2.csproj|solutionrelative:controllers\\uploadfilescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8BBE700F-27BF-4D8C-BB79-ED3729E58563}|AppSerWebParcial2.csproj|C:\\Users\\Aleja\\source\\repos\\AppSerWebParcial2\\clases\\clsmulta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8BBE700F-27BF-4D8C-BB79-ED3729E58563}|AppSerWebParcial2.csproj|solutionrelative:clases\\clsmulta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8BBE700F-27BF-4D8C-BB79-ED3729E58563}|AppSerWebParcial2.csproj|C:\\Users\\Aleja\\source\\repos\\AppSerWebParcial2\\controllers\\multacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8BBE700F-27BF-4D8C-BB79-ED3729E58563}|AppSerWebParcial2.csproj|solutionrelative:controllers\\multacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8BBE700F-27BF-4D8C-BB79-ED3729E58563}|AppSerWebParcial2.csproj|C:\\Users\\Aleja\\source\\repos\\AppSerWebParcial2\\clases\\clsupload.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8BBE700F-27BF-4D8C-BB79-ED3729E58563}|AppSerWebParcial2.csproj|solutionrelative:clases\\clsupload.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8BBE700F-27BF-4D8C-BB79-ED3729E58563}|AppSerWebParcial2.csproj|C:\\Users\\Aleja\\source\\repos\\AppSerWebParcial2\\clases\\clsimagenes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,46 +42,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
+              "Title": "UploadFilesController.cs",
+              "DocumentMoniker": "C:\\Users\\Aleja\\source\\repos\\AppSerWebParcial2\\Controllers\\UploadFilesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UploadFilesController.cs",
+              "ToolTip": "C:\\Users\\Aleja\\source\\repos\\AppSerWebParcial2\\Controllers\\UploadFilesController.cs",
+              "RelativeToolTip": "Controllers\\UploadFilesController.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAmwC4AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T01:13:40.22Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "ClsUpload.cs",
               "DocumentMoniker": "C:\\Users\\Aleja\\source\\repos\\AppSerWebParcial2\\Clases\\ClsUpload.cs",
               "RelativeDocumentMoniker": "Clases\\ClsUpload.cs",
               "ToolTip": "C:\\Users\\Aleja\\source\\repos\\AppSerWebParcial2\\Clases\\ClsUpload.cs",
               "RelativeToolTip": "Clases\\ClsUpload.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAlwBQAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAJQAAAAAAAAAAAApwJAAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-03T00:00:28.565Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "ClsMulta.cs",
               "DocumentMoniker": "C:\\Users\\Aleja\\source\\repos\\AppSerWebParcial2\\Clases\\ClsMulta.cs",
               "RelativeDocumentMoniker": "Clases\\ClsMulta.cs",
               "ToolTip": "C:\\Users\\Aleja\\source\\repos\\AppSerWebParcial2\\Clases\\ClsMulta.cs",
               "RelativeToolTip": "Clases\\ClsMulta.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAgwD4AAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAIA/wCAAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-02T18:33:46.411Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "MultaController.cs",
               "DocumentMoniker": "C:\\Users\\Aleja\\source\\repos\\AppSerWebParcial2\\Controllers\\MultaController.cs",
               "RelativeDocumentMoniker": "Controllers\\MultaController.cs",
               "ToolTip": "C:\\Users\\Aleja\\source\\repos\\AppSerWebParcial2\\Controllers\\MultaController.cs",
               "RelativeToolTip": "Controllers\\MultaController.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAQwCIAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-02T18:48:13.784Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "ClsImagenes.cs",
               "DocumentMoniker": "C:\\Users\\Aleja\\source\\repos\\AppSerWebParcial2\\Clases\\ClsImagenes.cs",
               "RelativeDocumentMoniker": "Clases\\ClsImagenes.cs",

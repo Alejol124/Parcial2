@@ -7,11 +7,15 @@ using System.Net;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Http;
+using System.Web.Mvc;
+using AppSerWebParcial2.Models;
+using System.Data.Entity;
 
 namespace AppSerWebParcial2.Clases
 {
     public class ClsUpload
     {
+        private DBExamenEntities dbExamen = new DBExamenEntities();
         public HttpRequestMessage request { get; set; }
         public string datos { get; set; }
         public string proceso { get; set; }
@@ -128,7 +132,7 @@ namespace AppSerWebParcial2.Clases
         {
             switch (proceso.ToUpper())
             {
-                case "PRODUCTO":
+                case "INFRACCION":
                     ClsImagenes ImagenesProducto = new ClsImagenes();
                     ImagenesProducto.idInfraccion = datos;//Debe venir la información que se proceso en la BD, para nuestro caso el codigo del producto
                     ImagenesProducto.Archivos = Archivos;
@@ -138,27 +142,40 @@ namespace AppSerWebParcial2.Clases
             }
         }
 
-        public HttpResponseMessage EliminarArchivo(string nombreArchivo)
+        public async Task<HttpResponseMessage> EliminarArchivo(string nombreArchivo)
         {
             try
             {
                 string ruta = HttpContext.Current.Server.MapPath("~/Archivos/");
                 string archivo = Path.Combine(ruta, nombreArchivo);
 
+                // Verificar si el archivo existe en la carpeta
                 if (File.Exists(archivo))
                 {
-                    File.Delete(archivo);
-                    return request.CreateResponse(HttpStatusCode.OK, "Archivo eliminado correctamente");
+                    File.Delete(archivo); // Eliminar archivo físico
                 }
                 else
                 {
-                    return request.CreateErrorResponse(HttpStatusCode.NotFound, "El archivo no existe");
+                    return request.CreateErrorResponse(HttpStatusCode.NotFound, "El archivo no fue encontrado en el servidor.");
                 }
+
+                // Buscar el registro en la base de datos
+                var imagen = await dbExamen.FotoInfraccions.FirstOrDefaultAsync(i => i.NombreFoto == nombreArchivo);
+
+                if (imagen != null)
+                {
+                    dbExamen.FotoInfraccions.Attach(imagen);
+                    dbExamen.FotoInfraccions.Remove(imagen);
+                    await dbExamen.SaveChangesAsync();
+                }
+                return request.CreateResponse(HttpStatusCode.OK, "Archivo eliminado correctamente.");
             }
             catch (Exception ex)
             {
                 return request.CreateErrorResponse(HttpStatusCode.InternalServerError, "Error al eliminar el archivo: " + ex.Message);
             }
         }
+
+
     }
 }

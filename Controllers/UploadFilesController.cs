@@ -38,5 +38,13 @@ namespace ServiciosProyecto.Controllers
             UploadFiles.proceso = proceso;
             return await UploadFiles.GrabarArchivo(true);
         }
+
+        [HttpDelete]
+        public async Task<HttpResponseMessage> Delete(HttpRequestMessage Request,string nombreFoto)
+        {
+            ClsUpload upload = new ClsUpload();
+            upload.request = Request;
+            return await upload.EliminarArchivo(nombreFoto);
+        }
     }
 }
