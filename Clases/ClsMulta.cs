@@ -10,6 +10,8 @@ namespace AppSerWebParcial2.Clases
     public class ClsMulta
     {
         private DBExamenEntities dbExamen = new DBExamenEntities();
+        public Vehiculo vehiculo { get; set; }
+        public Infraccion infraccion { get; set; }
 
         //Consultar FotoMultasPorPlaca
         public IQueryable ConsultarMultasPorPlaca(string placa)
@@ -44,26 +46,29 @@ namespace AppSerWebParcial2.Clases
         {
             try
             {
-                // Buscar el vehículo por la placa
-                dbExamen.Vehiculoes.FirstOrDefault(v => v.Placa == veh.Placa);
+                // Buscamos el vehículo por la placa
+                Vehiculo vehiculoExistente = dbExamen.Vehiculoes.FirstOrDefault(v => v.Placa == veh.Placa);
 
-                if (veh == null)
+                if (vehiculoExistente == null)
                 {
                     dbExamen.Vehiculoes.Add(veh);
-                    dbExamen.SaveChanges(); // Guardamos para obtener el ID del vehículo
+                    dbExamen.SaveChanges();
                 }
-
-                // Registramos la infracción
+                else
+                {
+                    veh = vehiculoExistente;
+                }
+                infra.PlacaVehiculo = veh.Placa;
                 dbExamen.Infraccions.Add(infra);
-                dbExamen.SaveChanges(); // Guardamos para obtener el ID de la infracción
+                dbExamen.SaveChanges();
+                return "Multa registrada correctamente";
             }
             catch (Exception ex)
             {
-
-                return "Error al guardar la multa " + ex.ToString();
+                return "Error al guardar la multa: " + ex.Message;
             }
-          return "Multa registrada correctamente";
         }
+
 
     }
 }

@@ -167,6 +167,7 @@
     <Compile Include="Clases\ClsUpload.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MultaController.cs" />
+    <Compile Include="Controllers\UploadFilesController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

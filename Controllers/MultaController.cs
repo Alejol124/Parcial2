@@ -30,10 +30,9 @@ namespace AppSerWebParcial2.Controllers
 
         [Route("InsertarFotoMulta")]
         [HttpPost]
-        public string InsertarFotoMulta([FromBody] Vehiculo vehiculo, [FromBody] Infraccion infraccion)
+        public string InsertarFotoMulta([FromBody] ClsMulta multa)
         {
-            ClsMulta multa = new ClsMulta();
-            return multa.InsertarFotoMulta(vehiculo, infraccion);
+            return multa.InsertarFotoMulta(multa.vehiculo, multa.infraccion);
         }
     }
 }
